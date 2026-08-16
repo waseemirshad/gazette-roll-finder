@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gazette Roll Finder</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="mark" aria-hidden="true">GF</div>
+      <div>
+        <h1>Gazette Roll Finder</h1>
+        <p>Excel list → PDF search, one student at a time.</p>
+      </div>
+    </header>
+
+    <section class="card import-card">
+      <label class="file-button" for="fileInput">
+        <span>Upload Excel or CSV</span>
+        <small>.xlsx or .csv</small>
+      </label>
+      <input id="fileInput" type="file" accept=".xlsx,.csv,text/csv" />
+      <div id="fileMeta" class="meta">No list loaded</div>
+    </section>
+
+    <section class="card current-card" aria-live="polite">
+      <div class="eyebrow">
+        <span id="position">0 / 0</span>
+        <span id="sectionBadge" class="badge">No section</span>
+      </div>
+      <div id="rollNo" class="roll">—</div>
+      <div id="studentName" class="student">Upload the Excel file to begin</div>
+      <div id="fatherName" class="father">Father name will appear here</div>
+    </section>
+
+    <section class="controls">
+      <button id="prevBtn" class="secondary" disabled>← Previous</button>
+      <button id="nextBtn" class="primary" disabled>Next →</button>
+      <button id="findBtn" class="wide" disabled>Find current roll in PDF</button>
+      <button id="copyBtn" class="ghost wide" disabled>Copy roll number</button>
+    </section>
+
+    <section class="settings">
+      <label class="switch-row">
+        <span>
+          <strong>Auto-search on Next</strong>
+          <small>Uses Chrome Find inside the active PDF tab</small>
+        </span>
+        <input id="autoSearch" type="checkbox" checked />
+      </label>
+    </section>
+
+    <div id="status" class="status info">Open the gazette PDF, then use this extension.</div>
+    <footer>Runs locally. Your Excel data is not uploaded anywhere.</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

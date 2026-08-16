@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Gazette Roll Finder",
+  "version": "1.0.0",
+  "description": "Upload an Excel/CSV roll list and step through roll numbers in an open PDF gazette.",
+  "permissions": ["activeTab", "tabs", "storage", "debugger"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Gazette Roll Finder",
+    "default_popup": "popup.html"
+  }
+}
