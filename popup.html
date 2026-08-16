@@ -38,15 +38,15 @@
     <section class="controls">
       <button id="prevBtn" class="secondary" disabled>← Previous</button>
       <button id="nextBtn" class="primary" disabled>Next →</button>
-      <button id="findBtn" class="wide" disabled>Find current roll in PDF</button>
+      <button id="findBtn" class="wide" disabled>Copy roll + open Chrome Find</button>
       <button id="copyBtn" class="ghost wide" disabled>Copy roll number</button>
     </section>
 
     <section class="settings">
       <label class="switch-row">
         <span>
-          <strong>Auto-search on Next</strong>
-          <small>Uses Chrome Find inside the active PDF tab</small>
+          <strong>Find on Next</strong>
+          <small>Copies roll and opens Chrome Find; press Ctrl+V, then Enter</small>
         </span>
         <input id="autoSearch" type="checkbox" checked />
       </label>
@@ -56,5 +56,6 @@
     <footer>Runs locally. Your Excel data is not uploaded anywhere.</footer>
   </main>
   <script src="popup.js"></script>
+  <script src="handoff.js"></script>
 </body>
 </html>
