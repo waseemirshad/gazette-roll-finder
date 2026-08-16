@@ -1,9 +1,10 @@
 # Gazette Roll Finder
 
-A Chrome extension that imports an `.xlsx` or `.csv` student list and steps through roll numbers in an open PDF gazette.
+A Chrome side-panel extension that imports an `.xlsx` or `.csv` student list and steps through roll numbers in an open PDF gazette.
 
 ## Features
 
+- Persistent Chrome side panel stays open beside the gazette.
 - Reads Excel files locally in the browser; no upload server.
 - Auto-detects columns such as `10th Roll No 2026`, `Roll No`, `Name`, `Father Name`, and `Section`.
 - Previous/Next navigation.
@@ -19,7 +20,8 @@ A Chrome extension that imports an `.xlsx` or `.csv` student list and steps thro
 4. Click **Load unpacked**.
 5. Select the `gazette-roll-finder` folder.
 6. Open your gazette PDF in a Chrome tab.
-7. Open the extension, upload the Excel file, and press **Find current roll in PDF** or **Next**.
+7. Click the extension icon to open its persistent Chrome side panel.
+8. Upload the Excel file and press **Find current roll in PDF** or **Next**.
 
 ## Excel format
 
