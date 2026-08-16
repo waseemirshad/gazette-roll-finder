@@ -13,14 +13,15 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  width: 390px;
-  min-height: 560px;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
   background: var(--canvas);
   color: var(--text);
   font: 15px/1.45 Arial, system-ui, sans-serif;
 }
 button, input { font: inherit; }
-.app { padding: 20px; }
+.app { width: 100%; max-width: 520px; margin: 0 auto; padding: 20px; }
 .hero { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
 .mark {
   width: 44px; height: 44px; border-radius: 10px;

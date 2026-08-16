@@ -1,5 +1,13 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+async function enableSidePanel() {
+  await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+}
+
+chrome.runtime.onInstalled.addListener(() => enableSidePanel().catch(() => {}));
+chrome.runtime.onStartup.addListener(() => enableSidePanel().catch(() => {}));
+enableSidePanel().catch(() => {});
+
 async function key(tabId, type, options) {
   await chrome.debugger.sendCommand({ tabId }, "Input.dispatchKeyEvent", {
     type,
